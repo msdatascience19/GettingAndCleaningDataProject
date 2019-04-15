@@ -75,4 +75,4 @@ tidySet <- aggregate(. ~subject + activityName, oneDataSet, mean)
 tidySet <- tidySet[order(tidySet$subject,tidySet$activityName),]
 
 # saving result to txt
-fwrite(tidySet,"resultTidySet.txt")
+write.table(tidySet,"resultTidySet.txt", row.name=FALSE)
